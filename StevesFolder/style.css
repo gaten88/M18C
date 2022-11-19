@@ -1,0 +1,183 @@
+/* see the brand guide for colors, fonts, and images in CodePen: 
+https://docs.google.com/document/d/13de5zlWmnox1BbZOiKo1p7tsirkgv0IQLG_bg1R60uE/edit?usp=sharing */
+
+/* Style Guide Color
+Peach #D98555
+Offwhite #F2F2F2
+Dark Brown #59331D
+Royal #082B59
+Navy Blue #131D26
+
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #f63c3c;
+    color: #555;
+    font-family: 'Lato', 'Arial',sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {    
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/*----BUTTONS----*/
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+.btn-full:link,
+.btn-full:visited {
+    background-color: #59331D;
+/*     border: 1px solid #D98555; */
+    color: #fff;
+
+}
+.btn:hover,
+.btn:active {
+    background-color: #D98555;
+}
+.btn-full:hover,
+.btn-full:active {
+/*     border: 1px solid #082B59; */
+}
+
+/*----------------------------------
+HEADER
+----------------------------------*/
+.container {
+  background: #082B59;
+}
+
+/* .logo {
+    height: 100px;
+    width: auto;
+    float: center;
+    margin-top: 20px; */
+ 
+.logo {
+    display: block;
+    width: 18%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  
+}
+
+.main-nav {
+/*     float: left; */
+    text-align:center;
+    line-height: 50px;
+    list-style:none;
+    background-color: #082B59; min-height: 65px;
+    border-bottom: 5px solid #D98555;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 25px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: Normal;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #D98555;
+    color: #D98555;
+/* background: #161F38; */
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    padding: 8px 25px;
+}
+
+.fa-solid {
+  padding: 0px 5px 0px 0px;
+}
+
+/*----BODY----*/
+
+.title {
+    font-size: 40px;
+    color: #000;
+/*     padding: 1rem 2rem 1rem 2rem; */
+    margin: 50px 0px 20px 155px;
+/*   width: 70%;
+    margin-bottom: 10px; */
+}
+
+.content {
+    line-height: 1.5;
+    color: #000;
+    font-family: 'Lato', 'Arial',sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+/*     border: 5px solid #000000; */
+    margin: 0px 155px 0px 155px;
+/*  padding-top: 1rem; */
+/*  padding: 0rem 2rem 1rem 2rem; */
+}
+
+
+
+.footer {
+  font-size: 12px;
+  color: #fff;
+  text-align:center;
+  line-height: 50px;
+  border-top: 5px solid #D98555;
+}
+
+
+/* Here is my code for my .card-container class to make it mobile first: */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: space-between;
+}
+
+/* Here is the new .card-container css that I wrote for viewports 600px and larger and that went inside my media query: */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+}
+
+/* and here is the code that you need to turn on the border-box model, this goes at the very top of your CSS file: */
+
+html {
+    box-sizing: border-box;
+ }
+ *, *::before, *::after {
+    box-sizing: inherit;
+ }
